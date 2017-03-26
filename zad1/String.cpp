@@ -47,9 +47,9 @@ void String::setStr(const char* newStr)
   }
 }
 
-void String :: setSize(int newSize)
+void String::setSize(int newSize)
 {
-    this->Size = newSize;
+    Size=newSize;
 
 }
 
@@ -58,7 +58,7 @@ char* String::getStr()
     return this-> Str;
 }
 
-int String:: getSize()
+int String::getSize()
 {
     return Size;
 }
