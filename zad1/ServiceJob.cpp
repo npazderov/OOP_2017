@@ -12,11 +12,11 @@ ServiceJob::ServiceJob(double newTime, Repair newRepairType)
     RepairType = newRepairType;
 }
 
-double ServiceJob::GetServiceJobPrice(const ServiceJob& object)
+/* double ServiceJob::GetServiceJobPrice(const ServiceJob& object)
 {
 	return object.getRepairType() * object.getTime();
 }
-
+*/
 
 double ServiceJob:: getTime()
 {
