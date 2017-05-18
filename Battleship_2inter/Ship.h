@@ -20,7 +20,8 @@ class Ship
         void Sethp(int) ;
         void Setsize(int);
 //Other methods
-
+    virtual void atack () {}
+    virtual void initialize () {}
 
     protected:
 
