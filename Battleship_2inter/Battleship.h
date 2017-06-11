@@ -8,13 +8,10 @@ class Battleship : public Ship
 {
     public:
         Battleship();
-        ~Battleship();
         Battleship(const Battleship& other);
         Battleship& operator=(const Battleship& other);
 
-    protected:
-
-    private:
+   
 };
 
 #endif // BATTLESHIP_H
