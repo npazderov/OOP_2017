@@ -2,7 +2,8 @@
 
 Battleship::Battleship()
 {
-    
+    setHP(4);
+    setID('B');
 }
 
 Battleship::Battleship(const Battleship& other)
