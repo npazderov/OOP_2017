@@ -2,7 +2,8 @@
 
 Submarine::Submarine()
 {
-    //ctor
+    setHP(3);
+    setID('S');
 }
 
 Submarine::Submarine(const Submarine& other)
