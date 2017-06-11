@@ -2,7 +2,8 @@
 
 Carrier::Carrier()
 {
-    //ctor
+    setHP(5);
+    setID('Ca');
 }
 
 Carrier::Carrier(const Carrier& other)
