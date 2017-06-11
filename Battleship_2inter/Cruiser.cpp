@@ -2,7 +2,8 @@
 
 Cruiser::Cruiser()
 {
-    //ctor
+    setHP(3);
+    setID('Cr');
 }
 
 Cruiser::Cruiser(const Cruiser& other)
