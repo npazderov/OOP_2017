@@ -2,7 +2,8 @@
 
 Destroyer::Destroyer()
 {
-    //ctor
+    setHP(2);
+    setID('D');
 }
 
 
