@@ -5,19 +5,17 @@ Destroyer::Destroyer()
     //ctor
 }
 
-Destroyer::~Destroyer()
-{
-    //dtor
-}
 
 Destroyer::Destroyer(const Destroyer& other)
+    :Ship(other)
 {
-    //copy ctor
 }
 
 Destroyer& Destroyer::operator=(const Destroyer& rhs)
 {
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
+    if (this == &rhs) 
+    {
+        Ship::operator=(rhs);
+    }
     return *this;
 }
