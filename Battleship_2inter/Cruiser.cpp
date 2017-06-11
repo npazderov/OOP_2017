@@ -5,19 +5,16 @@ Cruiser::Cruiser()
     //ctor
 }
 
-Cruiser::~Cruiser()
-{
-    //dtor
-}
-
 Cruiser::Cruiser(const Cruiser& other)
+   : Ship(other)
 {
-    //copy ctor
 }
 
 Cruiser& Cruiser::operator=(const Cruiser& rhs)
 {
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
+    if (this == &rhs) 
+    {
+        Ship::operator=(rhs);
+    }
     return *this;
 }
