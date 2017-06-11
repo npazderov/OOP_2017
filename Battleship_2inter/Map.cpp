@@ -21,24 +21,24 @@ Map::Map()
     }
 }
 
-void Map::setAt(char val, int _pX, int _pY)
+void Map::setAt(char val, int _positionX, int _positionY)
 {
-    map[_pX][_pY] = val;
+    map[_positionX][_positionY] = val;
 }
 
-bool Map::checkAt(int _pX, int _pY)
+bool Map::checkAt(int _positionX, int _positionY)
 {
-    if (map[_pX][_pY] != 0)
+    if (map[_positionX][_positionY] != 0)
         return false;
     else
         return true;
 }
 
-bool Map::collisionU(int _pX, int _pY, int _HP)
+bool Map::collisionU(int _positionX, int _positionY, int _HP)
 {
-    for (size_t i = _pY; i < _HP; i++)
+    for (size_t i = _positionY; i < _HP; i++)
     {
-        if (checkAt(_pX, _pY - i) == true)
+        if (checkAt(_positionX, _positionY - i) == true)
             {
                 return true;
             }
@@ -46,24 +46,11 @@ bool Map::collisionU(int _pX, int _pY, int _HP)
 
     return false;
 }
-bool Map::collisionD(int _pX, int _pY, int _HP)
+bool Map::collisionD(int _positionX, int _positionY, int _HP)
 {
-    for (size_t i = _pY; i < _HP; i++)
+    for (size_t i = _positionY; i < _HP; i++)
     {
-        if (checkAt(_pX, _pY + i) == true)
-            {
-                return true;
-            }
-    }
-
-    return false;
-}
-
-bool Map::collisionL(int _pX, int _pY, int _HP)
-{
-    for (size_t i = _pX; i < _HP; i++)
-    {
-        if (checkAt(_pX - i, _pY) == true)
+        if (checkAt(_positionX, _positionY + i) == true)
             {
                 return true;
             }
@@ -72,11 +59,24 @@ bool Map::collisionL(int _pX, int _pY, int _HP)
     return false;
 }
 
-bool Map::collisionR(int _pX, int _pY, int _HP)
+bool Map::collisionL(int _positionX, int _positionY, int _HP)
 {
-    for (size_t i = _pX; i < _HP; i++)
+    for (size_t i = _positionX; i < _HP; i++)
     {
-        if (checkAt(_pX + i, _pY) == true)
+        if (checkAt(_positionX - i, _positionY) == true)
+            {
+                return true;
+            }
+    }
+
+    return false;
+}
+
+bool Map::collisionR(int _positionX, int _positionY, int _HP)
+{
+    for (size_t i = _positionX; i < _HP; i++)
+    {
+        if (checkAt(_positionX + i, _positionY) == true)
             {
                 return true;
             }
