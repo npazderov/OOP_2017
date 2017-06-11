@@ -8,13 +8,10 @@ class Carrier : public Ship
 {
     public:
         Carrier();
-        ~Carrier();
         Carrier(const Carrier& other);
         Carrier& operator=(const Carrier& other);
 
-    protected:
-
-    private:
+  
 };
 
 #endif // CARRIER_H
