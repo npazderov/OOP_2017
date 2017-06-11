@@ -1,34 +1,39 @@
 #ifndef SHIP_H
 #define SHIP_H
-#include "ShipPosition.h"
+#include "Map.h"
 #include <iostream>
 #include <cstring>
 
-class Ship
+class Ship : public Map
 {
     public:
         Ship();
-        Ship(int newHp, int newSize);
+        Ship(int newHp,char newID, int newPositionX, int newPositionY);
         ~Ship();
         Ship(const Ship& other);
         Ship& operator=(const Ship& other);
 //Getters
-        int Gethp() const;
-        int Getsize() const;
+        int getHp() const;
+        char getID()const;
+        int getPositionX()const;
+        int getPositionY()const;
 //Setters
+        void setHP(int _HP);
+        void setID(char _ID);
 
-        void Sethp(int) ;
-        void Setsize(int);
-//Other methods
-    virtual void atack () {}
-    virtual void initialize () {}
+    //Other methods
+        virtual void place(int _positionX, int _positionY){};
+        virtual void attack(int _positionX, int _positionY){};
+
+        virtual void specialAbility(){};
 
     protected:
 
     private:
-        ShipPosition* position;
         int hp;
-        int size;
+        char ID;
+        int positionX;
+        int positionY;
 };
 
 #endif // SHIP_H
