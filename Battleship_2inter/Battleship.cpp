@@ -2,22 +2,19 @@
 
 Battleship::Battleship()
 {
-    //ctor
-}
-
-Battleship::~Battleship()
-{
-    //dtor
+    
 }
 
 Battleship::Battleship(const Battleship& other)
+    :Ship(other)
 {
-    //copy ctor
 }
 
 Battleship& Battleship::operator=(const Battleship& rhs)
 {
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
+    if (this == &rhs)
+    {
+        Ship::operator=(rhs);
+    }
     return *this;
 }
