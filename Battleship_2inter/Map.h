@@ -5,17 +5,26 @@ using namespace std;
 
 class Map
 {
-private:
-    char field[10][10];
+protected:
+
 	int numberOfShips;
 
 public:
+    char map[9][9];
     Map();
-    Map(const char field, int numberOfShips);
 
-    bool getField();
-    int getNumberOfShips() const ;
+    bool collisionU(int _positionX, int _positionY, int _HP);
+    bool collisionD(int _positionX, int _positionY, int _HP);
+    bool collisionL(int _positionX, int _positionY, int _HP);
+    bool collisionR(int _positionX, int _positionY, int _HP);
+    void setAt(char val, int _positionX, int _positionY);
 
-    void setField(bool field);
+    bool checkAt(int _positionX, int _positionY);
+    void printMap(); 
+    bool chackAt();
+
+
+    int getNumberOfShips() const;
     void setNumberOfShips(int numberOfShips);
+
 };
