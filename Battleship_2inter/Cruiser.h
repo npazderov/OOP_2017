@@ -8,6 +8,7 @@ class Cruiser : public Ship
 {
     public:
         Cruiser();
+        Cruiser(int newHp,char newID, int newPositionX, int newPositionY);
         Cruiser(const Cruiser& other);
         Cruiser& operator=(const Cruiser& other);
 
