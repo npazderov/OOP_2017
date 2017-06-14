@@ -8,6 +8,7 @@ class Carrier : public Ship
 {
     public:
         Carrier();
+        Carrier(int newHp,char newID, int newPositionX, int newPositionY);
         Carrier(const Carrier& other);
         Carrier& operator=(const Carrier& other);
 
