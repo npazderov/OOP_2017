@@ -6,6 +6,14 @@ Destroyer::Destroyer()
     setID('D');
 }
 
+Destroyer::Destroyer(int newHp,char newID, int newPositionX, int newPositionY):Ship(newHp, newID, newPositionX, newPositionY)
+
+{
+    hp = newHp;
+    ID = newID;
+    positionX = newPositionX;
+    positionY = newPositionY;
+}
 
 Destroyer::Destroyer(const Destroyer& other)
     :Ship(other)
