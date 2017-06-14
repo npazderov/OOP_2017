@@ -144,3 +144,27 @@ void Ship::place(int _positionX, int _positionY)
         while (true);
     }
 }
+void Ship::attack(Map& _map,  Map & _map2, int _playerHP)
+ {
+    int _positionX, _positionY;
+    cout<< "Please enter coordinate for attack"<<endl;
+    cin >> _positionX >> _positionY;
+    if(_map.checkAt(_positionX,_positionY))
+    {
+        cout<<"It's a miss"<<endl;
+        _map2.setAt('O', _positionX, _positionY);
+    }
+    else if(!_map.checkAt(_positionX,_positionY))
+    {
+        cout << "You hit a ship!"<<endl;
+        _map2.setAt('X', _positonX, _positionY);
+        hit(_playerHP);
+
+    }
+
+ }
+
+ void Ship::hit(int _playerHP)
+ {
+     _playerHP--;
+ }
