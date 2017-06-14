@@ -8,6 +8,7 @@ class Submarine : public Ship
 {
     public:
         Submarine();
+        Submarine(int newHp,char newID, int newPositionX, int newPositionY);
         Submarine(const Submarine& other);
         Submarine& operator=(const Submarine& other);
 
