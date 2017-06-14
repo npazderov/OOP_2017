@@ -22,8 +22,10 @@ class Ship : public Map
         void setID(char _ID);
 
     //Other methods
-        virtual void place(int _positionX, int _positionY){};
-        virtual void attack(int _positionX, int _positionY){};
+         void hit(int _playerHP);
+        void place(Map &_map);
+        void attack(Map &_map, Map &_map2, int _playerHP);
+
 
         virtual void specialAbility(){};
 
